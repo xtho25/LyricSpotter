@@ -1,7 +1,7 @@
 # LyricSpotter
 A python script that gets the lyrics of the current Spotify song playing.
 Inspired by [Overlyrics](https://github.com/CezarGab/Overlyrics).
-I recommend using Overlyrics instead of my programm as it has way more functionality. If you are still here then go on and read on how to set up my code below.
+
 # How to set up:
 
 ## Download the libraries from requirements.txt using pip:
