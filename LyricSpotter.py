@@ -7,9 +7,9 @@ import tkinter.font as font
 from datetime import datetime
 import time
 
-DEBUG_MODE=True
+DEBUG_MODE=False #If true sends debug messages
 
-UPDATE_WAIT_TIME=0.1
+UPDATE_WAIT_TIME=0.1 #Time to wait till next info update
 
 root = tk.Tk()
 root.title("Lyrics finder")
@@ -19,13 +19,13 @@ root.configure(bg='#03020d')
 
 get_font = font.Font(family="Arial", size="22", weight="normal")
 
-lyrics_label = tk.Label(root, text="Starting...", bg="#03020d", fg="#dfe0eb", font=get_font)
+lyrics_label = tk.Label(root, text="Starting...", bg="#03020d", fg="#dfe0eb", font=get_font) #Starting text
 lyrics_label.pack(expand=True)
 
 scope = "user-read-playback-state"
 
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id='<CLIENT_ID>',
-                                               client_secret='<CLIENT_SECRET>',
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id='<CLIENT_ID>', #Enter your client id here
+                                               client_secret='<CLIENT_SECRET>', #Enter your client secret here
                                                scope=scope,
                                                redirect_uri='https://google.com/'))
 
